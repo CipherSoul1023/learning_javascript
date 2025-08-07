@@ -34,6 +34,7 @@ console.log(username);
 
 //This is another DOM manipulation where we create a function when an element in the html file is clicked,
 //whatever is included in that function will be called.
+
 /*
 document.getElementById("MySubmit").onclick = function(){
     username = document.getElementById("mytext").value;
@@ -53,4 +54,161 @@ let username = String(username)
 
 //Converting isStudent to a bool.
 let isStudent = Boolean(isStudent)
+*/
+
+
+/*
+//Creating a random number between 0 and n
+let randomNum = Math.floor(Math.random() * n)+1;
+
+//Creating a random number between n and m(Where n is the maximum)
+let randomNum = Math.floor(Math.random() * (n - m)) + n;
+*/
+
+//Checked Property(.checked) In js
+// The checked property is a property in js that checks the checked state of a radio button or
+//check box
+// e.g MyCheckBox.checked
+
+
+/* The spread operator
+    -> This is an operator that takes in a list of numbers and separates them in =to individual
+        numbers.
+
+   The Rest Parameter.
+    -> Tis is used when as a parameter of a function if on doesn't know how many inputs are going
+        to be passed into the function.
+        e. function sum(...numbers){}
+        
+*/
+
+/*function combineStrings(...words){
+    combined_string = "";
+    for (let word in words){
+        combined_string += word;
+    }
+
+    return combined_string;
+}
+
+*/
+
+
+/* Callbacks
+    1. A call back is a function that is passed in as an arguement to another function.
+
+    Apparently, callbacks are used in asynchronous events. e.g File reading, Fetching an API.
+
+    e.g 
+    function sayHello(callback){
+        console.log("Hello!");
+        callback();    
+    }
+    
+    function sayGoodbye(){
+        console.log("Goodbye!");
+    }
+
+    sayHello(sayGoodbye) -> What happens here is that when the function sayHello is done, we invoke the
+                            saYGoodbye function.
+
+    2. In js, if one line of the program takes more than the other, the one that takes less time to run
+        will be executed first. But what if the second line depends on the output of the first line?
+        That is where callbacks come in, where we manipulate both fnctions in a way that the second line
+        will wait for the first line to run then the second line will also run as well.
+
+    Extra Info: setTimeout -> Sets how much time does what is passed in that function will take to run.
+        e.g setTimeout(function{
+            console.log("Hello");
+        }, 3000) -> Runs for 3 seconds.
+*/
+
+/*
+    forEach() -> method used to iterate through an array of some elements and apply a specific function.(Callback)
+                e.g array.forEach(function(element, index, array){
+                
+                })
+
+*/
+
+/*
+    1. The map()  Method -> Accepts a callback and applies that callback in each element of an array
+                            - It also returns a new modified array.
+    
+    2. Syntax -> const newArray = array.map(function(array, element, index){
+        // Work Done Here
+    })
+
+*/
+
+/*
+    1. The filter() method -> creates a new array by filtering out elements.
+
+    2. Syntax -> const newArray = array.filter(function(array, element, index){
+        // Work Done Here
+    })
+
+    The function passed into the filter method will return a boolean value, then the filter method
+    will stick all the values that return true in the new array.
+
+*/
+
+/*
+    1. The reduce() Method -> This reduces the elements of an array into a single value.
+
+    2. Syntax -> const cumulative = array.reduce(function(accumulator, currentValue, index, array) {
+                                        // logic goes here
+                                    }, initialValue);
+
+
+*/
+
+/*
+    1. Function Expressions
+        - The Difference Between Function Expressions and Function Declarations.
+            e.g Function Declaration.
+                - function hello(){
+                    console.log("hello");
+                }
+                - You can call it before it is written in the code.
+
+                Function Expression.
+                - const hello = function(){
+                    console.log("hello");
+                }
+                - You can call it after it is written on the code.
+*/
+
+/* 
+    const numbers = [1, 2, 3, 4, 5, 6];
+
+    const squares = function(element){
+        return Math.pow(element, 2);
+    }
+
+    const squaredNumbers = numbers.map(squares);
+*/
+
+/* 
+    Arrow Functions -> A concise way to write function expressions and it is best when using
+                        functions that you are going to use once.
+                        (parameters) => some code
+
+*/
+
+/*
+
+    //Function Declaration
+    function hello(){
+        console.log("Hello");
+    }
+
+    //Function Expression
+    const hello = function(){
+        console.log("Hello");
+    }
+
+    //Arrow Functions
+    const hello = () => console.log("Hello World");
+
 */
