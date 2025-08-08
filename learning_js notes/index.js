@@ -212,3 +212,11 @@ let randomNum = Math.floor(Math.random() * (n - m)) + n;
     const hello = () => console.log("Hello World");
 
 */
+
+/*
+    1. EventListeners - This is a way for javascript to wait for something to happen in the code and 
+                        then respond with some code.
+
+    2. Syntax -> element.addEventListener(event, function);
+
+*/

@@ -22,26 +22,41 @@
       </ul>
     </div>
 
-    <div class="level-selection">
-      <h2>🎮 Select Level</h2>
-      <select id="levelSelect">
-        <option value="easy">Easy (1-10)</option>
-        <option value="medium">Medium (1-50)</option>
-        <option value="hard">Hard (1-100)</option>
-      </select>
-    </div>
+<div class="level-selection">
+  <h2>🎮 Select Level</h2>
+  <form id="levelForm">
+    <label>
+      <input type="radio" name="level" value="easy" id = "level1" checked />
+      Easy (1–10)
+    </label><br />
+    <label>
+      <input type="radio" name="level" value="medium" id = "level2" />
+      Medium (1–50)
+    </label><br />
+    <label>
+      <input type="radio" name="level" value="hard" id = "level3" />
+      Hard (1–100)
+    </label><br/>
+    <label>
+      <input type = "radio" name = "level" value = "nathi" id = "nathilevel"/>
+      Nathi's Level (1 - &infin;)
+    </label>
+  </form>
+</div>
+
 
     <p class="instructions" id="instructionText">Guess a number between <strong>1 and 10</strong></p>
 
     <input type="number" id="guessInput" placeholder="Enter your guess" />
     <button id="submitGuess">Submit Guess</button>
 
+
     <p class="feedback" id="feedback"></p>
-    <p class="attempts" id="attempts"></p>
+    <p class="attempts" id="attempts"><strong>Attempts Remaining</strong>: 5</p>
 
     <button id="resetGame" class="hidden">Play Again</button>
   </div>
 
-  <script src="script.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
