@@ -220,3 +220,151 @@ let randomNum = Math.floor(Math.random() * (n - m)) + n;
     2. Syntax -> element.addEventListener(event, function);
 
 */
+
+/*
+    Javascript Objects -> These are groups of ralted data, in short, it is similar to a python
+                            dictionary.
+                            e.g const person = {
+                                        Name: "Frans",
+                                        Surname: "Makhafola",
+                                        Age: 10,
+                                }
+    A Method In Javascript -> This is basically a function that belongs to an object.
+
+
+*/
+
+/*
+    1. The THIS keyword: It is a reference to the object where THIS is used.
+                        -> THIS can help us access properties inside of the object 
+                            we are working on.
+
+*/
+
+/*
+    Constructors -> All I know is that this is a special method, almost similar to a class though.
+    
+    The Syntax:
+        function Person(name, surname, age){
+            this.name = name;
+            this.surname = surname;
+            this.age = age;
+        }
+
+        // Creating an instance of the constrctor.
+        const person1 = new Person("Frans","Makhafola", 18);
+
+    Accessing Some Elements:
+        person1.name;
+        person1.surname;
+        person1.age;
+*/
+
+/*
+    Classes -> These are tools that make it way easier to work with objects.
+        Syntax:
+            class Person{
+                //Constructor Here
+                constructor(name, surname){
+                        this.name = name;
+                        this.price = price;
+                    }
+                }
+
+    
+
+ */
+
+/*
+    The static keyword -> This is the keyword that is able to differentiate something that belongs to
+                            an object and something that belongs to the class itself.
+                        
+                        -> We can access a method or a property, declared with the static keyword,
+                            without creating an object. 
+
+*/
+
+/*
+    Inheritance -> This occurs when the child class inherits the properties of the parent class,
+                    by passing the the parent class in the parameters of the child class.
+
+                Syntax Of Inheritance:
+                    class Animal{
+                        }
+
+                    class Cat extends Animal{
+                        }
+
+
+*/
+
+/*
+    The Super Keyword -> This keyword allows you access a method or property of the parent class,
+                            without overriding the same property from the child class.
+
+                    The Syntax:
+                        class Animal{
+                                constructor(){
+                                    
+                                    }
+
+                                speak();
+                            }
+
+                        class Rabbit extends Animal{
+                                constructor(){
+                                        super();
+                                    }
+                                
+                                speak(){
+                                        super.speak();
+                                    }
+                            }
+
+*/
+
+/*
+    Getters And Setters -> These are special methods you can use to write and read encapsulated data.
+
+    The Syntax Of Getters and Setters:
+        class Rectange{
+            constructor(width, height){
+                this.width = width;
+                this.height = height;
+            }
+
+            //It is a must for the method of this function to match the property being accessed.
+            // And the newWidth variable automatically becomes the property itself.
+            set width(newWidth){
+                if (newWidth > 0){
+                    this._width = newWidth;                
+                }
+
+                else{
+                    console.error("Invalid width");    
+                }
+            }
+
+            set height(newHeight){
+                if (newHeight > 0){
+                    this._height = newHeight;                
+                }
+
+                else{
+                    console.error("Invalid width");    
+                }
+            }
+
+            get width(){
+                return this._width;
+            }
+
+            get height(){
+                return this._height;
+            }
+            
+        
+        }
+
+
+*/
